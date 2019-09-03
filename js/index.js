@@ -51,9 +51,9 @@ for (i = 0; i < navigation.length; i++) {
 const appendNewItem = document.createElement('a');
 const prependNewItem = document.createElement('a');
 const navi = document.querySelector('nav');
-appendNewItem.innerText = 'Last';
+appendNewItem.innerText = 'Goodbye';
 appendNewItem.href = '#';
-prependNewItem.innerText = 'First';
+prependNewItem.innerText = 'Hello';
 appendNewItem.href = '#';
 navi.append(appendNewItem);
 navi.prepend(prependNewItem);
