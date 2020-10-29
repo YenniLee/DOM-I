@@ -40,3 +40,53 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navigation = document.querySelectorAll('a');
+for (i = 0; i < navigation.length; i++) {
+  navigation[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
+  navigation[i].style.color = 'green';
+}
+
+
+const appendNewItem = document.createElement('a');
+const prependNewItem = document.createElement('a');
+const navi = document.querySelector('nav');
+appendNewItem.innerText = 'Goodbye';
+appendNewItem.href = '#';
+prependNewItem.innerText = 'Hello';
+appendNewItem.href = '#';
+navi.append(appendNewItem);
+navi.prepend(prependNewItem);
+
+const topHeading = document.querySelector('h1');
+topHeading.innerHTML = siteContent['cta']['h1'];
+
+const topBtn = document.querySelector('button');
+topBtn.innerHTML = siteContent['cta']['button'];
+topBtn.style.color = 'black';
+topBtn.style.backgroundColor = 'plum';
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const heading = document.querySelectorAll('h4');
+heading[0].innerHTML = siteContent['main-content']['features-h4'];
+heading[1].innerHTML = siteContent['main-content']['about-h4'];
+heading[2].innerHTML = siteContent['main-content']['services-h4'];
+heading[3].innerHTML = siteContent['main-content']['product-h4'];
+heading[4].innerHTML = siteContent['main-content']['vision-h4'];
+heading[5].innerHTML = siteContent['contact']['contact-h4'];
+
+const centerImg = document.getElementById('middle-img');
+centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const content = document.querySelectorAll('p');
+content[0].innerHTML = siteContent['main-content']['features-content'];
+content[1].innerHTML = siteContent['main-content']['about-content'];
+content[2].innerHTML = siteContent['main-content']['services-content'];
+content[3].innerHTML = siteContent['main-content']['product-content'];
+content[4].innerHTML = siteContent['main-content']['vision-content'];
+content[5].innerHTML = siteContent['contact']['address'];
+content[6].innerHTML = siteContent['contact']['phone'];
+content[7].innerHTML = siteContent['contact']['email'];
+content[8].innerHTML = siteContent['footer']['copyright'];
